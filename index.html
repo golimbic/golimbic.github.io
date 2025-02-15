@@ -13,13 +13,18 @@
       --pri: #F7CE5B;
       --accent: #DB2955;
       --phi: 1.618;
+      --spacing: 0.5rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
     }
 
     body {
       background-color: var(--bg);
       color: var(--fg);
       height: 100vh;
-      margin: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -29,7 +34,31 @@
 
     #logo {
       fill: var(--pri);
-      height: calc(var(--phi) * 2rem);
+      height: calc(var(--spacing) * 8);
+      margin-bottom: calc(var(--spacing) * 6);
+    }
+
+    h1 {
+      line-height: calc(var(--spacing) * 8);
+      font-size: calc(var(--phi) * 2 * 1rem);
+      margin: calc(var(--spacing) * 2) 0;
+      font-weight: 500;
+
+      i {
+        color: var(--pri)
+      }
+    }
+
+    h2 {
+      line-height: calc(var(--spacing) * 5);
+      font-size: calc(var(--phi) * 1 * 1rem);
+      margin: calc(var(--spacing) * 1) 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   </style>
 </head>
@@ -40,10 +69,7 @@
       <path fill-rule="evenodd" clip-rule="evenodd"
         d="M32.3109 3L62.6218 55.5H42.5063L31.8253 37L21.1443 55.5H2L12.8253 36.75H31.6506L22.238 20.4468L32.3109 3Z" />
     </svg>
-    <h1>
-      Limbic
-    </h1>
-    <h2>Crafting tools for humans and beyond</h2>
+    <h1>Crafting tools for <i>humans</i> and beyond</h1>
   </header>
 
 </body>
